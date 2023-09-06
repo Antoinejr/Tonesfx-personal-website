@@ -56,7 +56,7 @@ export default class Home extends React.Component {
           {/* anchors to different section in page */}
           {/* create a list item */}
           <NavBar
-            goToBio={this.goToBio}
+            goTozBio={this.goToBio}
             goToResume={this.goToResume}
             goToPortfolio={this.goToPortfolio}
             goToContact={this.goToContact}
@@ -75,8 +75,8 @@ export default class Home extends React.Component {
               className="pdf"
               src={pdf}
               type="application/pdf"
-              width="80%"
-              height="550px"
+              width="100%"
+              height="550vh"
             />
           </div>
         </div>
