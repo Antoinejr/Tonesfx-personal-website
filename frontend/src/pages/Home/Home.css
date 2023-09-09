@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+h3 {
+  margin: 0.5rem 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.1rem solid black;
+  position: sticky;
+  transition: all 0.1s;
+}
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 1rem;
+  margin: 0 0;
+  align-items: flex-start;
+}
+.topHeader-wrapper:hover > * {
+  animation: name-hover 0.25s linear;
+}
+.nav {
+  display: block;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0rem 0rem 0.5rem;
+}
+
+.menu-item {
+  margin: 0 0.5rem;
+  padding: 0.25rem 0.75rem;
+  transition: all 0.2s linear;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  background-color: #e0e0e0;
+  border-radius: 0.5rem;
+}
+.main {
+  margin-top: 2.5rem;
+  display: block;
+}
+.sectionCv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.cresume {
+  min-width: 80%;
+  min-height: 100vh;
+}
+.download-wrapper {
+  margin: 1.5rem 0 0;
+ 
+}
+.downloadBtn{
+    transition: 0.1s;
+    padding: 0.5rem;
+    border: 0.1rem solid #000;
+
+}
+
+.downloadBtn:hover{
+  background-color: #b9f0a5;
+}
+.sectionBio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio {
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background-color: #e0e0e0;
+  border-radius: 0.2rem;
+  width: 80%;
+  margin-top: 0;
+}
+.footer {
+  margin: 2.5rem 0 0;
+  background-color: #bbbbbb;
+  border-top: 0.1rem solid #000;
+  padding: 1rem 0;
+}
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style-type: none;
+  transition: 0.1s;
+}
+.footer-menu-item:hover > a {
+  text-decoration: underline;
+  color: #b9f0a5;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+@keyframes name-hover {
+  0% {
+    transform: translateY(0);
+  }
+  49% {
+    transform: translateY(-2rem);
+  }
+  51% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
