@@ -1,100 +1,133 @@
-import React from "react";
-import "./Style.css";
-import pdf from "../../assets/Resume.pdf";
-import NavBar from "../../Components/NavBar";
+import React, { useRef } from "react";
+import "./Home.css";
+import resume from "../../assets/Anthony_Irokosu_Resume.pdf";
 
-export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    // Refs for different elements]
-    this.bioRef = React.createRef();
-    this.resumeRef = React.createRef();
-    this.portfolioRef = React.createRef();
-    this.contactRef = React.createRef();
-  }
+function Home() {
+  // hooks
+  const scrollRef = useRef([]);
 
-  goToBio() {
-    this.bioRef.scrollIntoView({
+  // functions
+  function scrollIntoView(index) {
+    scrollRef.current[index].scrollIntoView({
       behavior: "smooth",
       block: "start",
-      inline: "center",
+      inline: "nearest",
     });
   }
-  goToResume() {
-    if (this.resumeRef && this.resumeRef.current) {
-      this.resumeRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "center",
-      });
-    }
-  }
-  goToPortfolio() {
-    if (this.portfolioRef && this.portfolioRef.current) {
-      this.portfolioRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "center",
-      });
-    }
-  }
-  goToContact() {
-    console.log("here");
-    if (this.contactRef && this.contactRef.current) {
-      this.contactRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "center",
-      });
-    }
-  }
 
-  render() {
-    return (
-      <div className="container">
-        <div className="header">
-          {/* anchors to different section in page */}
-          {/* create a list item */}
-          <NavBar
-            goTozBio={this.goToBio}
-            goToResume={this.goToResume}
-            goToPortfolio={this.goToPortfolio}
-            goToContact={this.goToContact}
-          />
-        </div>
-        <div className="body">
-          <div ref={this.bioRef} className="bio">
-            <p className="aboutInfo">
-              Hi My name is Anthony and i'm a Computer science student at
-              University of Twente, I like to write programs and in my spare
-              time do a bit of Photography and Writing
-            </p>
-          </div>
-          <div ref={this.resumeRef} className="resume">
-            <embed
-              className="pdf"
-              src={pdf}
-              type="application/pdf"
-              width="100%"
-              height="550vh"
-            />
+  return (
+    <div className="container">
+      <div className="header">
+        <div className="topHeader">
+          <div className="topHeader-wrapper">
+            <h3>Archetype Anthony</h3>
           </div>
         </div>
-        <div ref={this.portfolioRef} className="gitRepo"></div>
-        <div ref={this.contactRef} className="contact">
-          <p>
-            <a href="https://instagram.com/tones.fx">Instagram</a>
-            <a href="https://github.com/Antoinejr">Github</a>
-            <a href="https://youtube.com/channel/UCQlmTQRIDEep3n3lfa6KCCA">
-              Youtube
-            </a>
+        <nav className="menuHeader">
+          <ul className="menu">
+            <li
+              className="menu-item"
+              onClick={function () {
+                scrollIntoView(0);
+              }}
+            >
+              Bio
+            </li>
+            <li
+              className="menu-item"
+              onClick={function () {
+                scrollIntoView(1);
+              }}
+            >
+              Resume
+            </li>
+            <li className="menu-item">
+              <a
+                href="https://myanimelist.net/profile/Senot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MAL
+              </a>
+            </li>
+            <li className="menu-item">
+              <a
+                href="https://github.com/Antoinejr?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="main">
+        <div
+          className="sectionBio"
+          ref={function (el) {
+            scrollRef.current[0] = el;
+          }}
+        >
+          <h2>Bio</h2>
+          <p className="bio">
+            I am interested and fascinated by how people interact with
+            technology. I have a deep interest in pushing for more accessible
+            and usage of technologies. I also have crippling anime addiction and
+            a love for for pokemon music. Mai best
           </p>
         </div>
-
-        <div className="footer">
-          <p> © 2022 Anthony M. Irokosu</p>
+        <div
+          className="sectionCv"
+          ref={function (el) {
+            scrollRef.current[1] = el;
+          }}
+        >
+          <h2>Resume</h2>
+          <embed className="cresume" src={resume} type="application/pdf" />
+          <div className="download-wrapper">
+            <a href={resume} download="Anthony_Irokosu_Resume.pdf">
+              <span className="downloadBtn">PDF Download</span>
+            </a>
+          </div>
         </div>
       </div>
-    );
-  }
+      <div className="footer">
+        <div className="socials">
+          <ul className="footer-menu">
+            <li className="footer-menu-item">
+              <a
+                a
+                href="https://www.instagram.com/tones.fx/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="https://www.linkedin.com/in/anthony-irokosu-7b7984282/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li className="footer-menu-item">
+              <a
+                href="https://www.youtube.com/watch?v=F_8hbv3G1Q8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Youtube
+              </a>
+            </li>
+          </ul>
+          </div>
+      </div>
+    </div>
+  );
 }
+
+export default Home;
