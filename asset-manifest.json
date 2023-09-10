@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Tonesfx-personal-website/static/css/main.ef76b94f.css",
-    "main.js": "/Tonesfx-personal-website/static/js/main.3c2a6772.js",
+    "main.css": "/Tonesfx-personal-website/static/css/main.ca12cb4d.css",
+    "main.js": "/Tonesfx-personal-website/static/js/main.8719dc11.js",
     "static/js/787.cda612ba.chunk.js": "/Tonesfx-personal-website/static/js/787.cda612ba.chunk.js",
     "static/media/Anthony_Irokosu_Resume.pdf": "/Tonesfx-personal-website/static/media/Anthony_Irokosu_Resume.20c84e2c60747bf59859.pdf",
     "index.html": "/Tonesfx-personal-website/index.html",
-    "main.ef76b94f.css.map": "/Tonesfx-personal-website/static/css/main.ef76b94f.css.map",
-    "main.3c2a6772.js.map": "/Tonesfx-personal-website/static/js/main.3c2a6772.js.map",
+    "main.ca12cb4d.css.map": "/Tonesfx-personal-website/static/css/main.ca12cb4d.css.map",
+    "main.8719dc11.js.map": "/Tonesfx-personal-website/static/js/main.8719dc11.js.map",
     "787.cda612ba.chunk.js.map": "/Tonesfx-personal-website/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef76b94f.css",
-    "static/js/main.3c2a6772.js"
+    "static/css/main.ca12cb4d.css",
+    "static/js/main.8719dc11.js"
   ]
 }
