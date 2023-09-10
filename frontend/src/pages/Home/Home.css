@@ -65,9 +65,20 @@ h3 {
   align-items: center;
   margin-top: 2.5rem;
 }
-.cresume {
-  min-width: 80%;
-  min-height: 100vh;
+.pdf-wrapper {
+  /* position: relative;   */
+  overflow: hidden;
+  width: 80%;
+  height: 1000px;
+}
+@media (max-height: 836px) {
+  .pdf-wrapper {
+    height: 500px;
+  }
+}
+.pdf-wrapper iframe{
+  width: 100%;
+  height: 100%;
 }
 .download-wrapper {
   margin: 1.5rem 0 0;
@@ -88,14 +99,22 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
-
-.bio {
-  flex-wrap: wrap;
-  padding: 1.5rem;
+.bio{
+  display: flex;
+  flex-direction: column;
   background-color: #e0e0e0;
   border-radius: 0.2rem;
   width: 80%;
   margin-top: 0;
+}
+.descrip {
+  font-size: 1.2rem;
+  padding: 0 2rem 1rem 2rem ;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  /* padding: 1.5rem; */
+
 }
 .footer {
   margin: 2.5rem 0 0;

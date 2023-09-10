@@ -41,7 +41,7 @@ function Home() {
             >
               Resume
             </li>
-            <li className="menu-item">
+            {/* <li className="menu-item">
               <a
                 href="https://myanimelist.net/profile/Senot"
                 target="_blank"
@@ -49,7 +49,7 @@ function Home() {
               >
                 MAL
               </a>
-            </li>
+            </li> */}
             <li className="menu-item">
               <a
                 href="https://github.com/Antoinejr?tab=repositories"
@@ -70,12 +70,30 @@ function Home() {
           }}
         >
           <h2>Bio</h2>
-          <p className="bio">
-            I am interested and fascinated by how people interact with
-            technology. I have a deep interest in pushing for more accessible
-            and usage of technologies. I also have crippling anime addiction and
-            a love for for pokemon music. Mai best
-          </p>
+          <div className="bio">
+            <div className="descrip">
+              Hello! I am Anthony, a software developer with a Bsc Computer
+              science from the University of Twente.
+            </div>
+            <div className="descrip">
+              I am deeply interested by the connection between people and
+              technology. I like to be reliable, solving problems and enjoy
+              working with new and unfamiliar technologies.
+            </div>
+            <div className="descrip">
+              I have experience in fullstack development. I gained experience
+              working as a software developer intern at Clik, a
+              community-focused start-up in Enschede, The Netherlands, where I
+              held responsibilites in developing full-stack and delivering
+              production level components. I developed solutions, acted as a
+              leader in team through the Agile workflow, conducted unit testing,
+              and presented new feature suggestions to Company Leadership.
+            </div>
+            <div className="descrip">
+              Outside of software developing, I love Music, film scoring,
+              digital photography, and cinematography.
+            </div>
+          </div>
         </div>
         <div
           className="sectionCv"
@@ -84,7 +102,9 @@ function Home() {
           }}
         >
           <h2>Resume</h2>
-          <embed className="cresume" src={resume} type="application/pdf" />
+          <div className="pdf-wrapper">
+            <iframe className="cresume" title="Resume"src={resume} type="application/pdf" />
+          </div>
           <div className="download-wrapper">
             <a href={resume} download="Anthony_Irokosu_Resume.pdf">
               <span className="downloadBtn">PDF Download</span>
@@ -116,15 +136,15 @@ function Home() {
             </li>
             <li className="footer-menu-item">
               <a
-                href="https://www.youtube.com/watch?v=F_8hbv3G1Q8"
+                href="mailto:anthony.irokosu@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Youtube
+                Mail
               </a>
             </li>
           </ul>
-          </div>
+        </div>
       </div>
     </div>
   );
